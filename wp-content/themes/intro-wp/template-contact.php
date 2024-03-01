@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php /* Template Name: Page "Contact" */ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +12,14 @@
     <script src="<?= dw_asset('script.js') ?>"></script>
 </head>
 <body>
-<h1><?= get_bloginfo('name'); ?></h1>
-<main class="page">
-    <div class="page__content">
+<main class="contact">
+    <div class="contact__content">
         <?php if (have_posts()): while (have_posts()): the_post(); //Ouverture ?>
-            <h1>
+            <h1 class="contact__title">
                 <?= get_the_title(); ?>
             </h1>
             <?php the_content(); // <?= get_the_content(); > ?>
         <?php endwhile; endif; // Fermeture ?>
-        <p>Mon texte...</p>
     </div>
 </main>
 </body>
